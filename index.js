@@ -30,15 +30,15 @@ while (!isWinner) {
 
     if (userChoice === computerChoice) {
       alert("Ничья, играем ещё раз!");
-    } else if (
-      (userChoice === "камень" && computerChoice === "ножницы") ||
-      (userChoice === "ножницы" && computerChoice === "бумага") ||
-      (userChoice === "бумага" && computerChoice === "камень")
-    ) {
-      alert("Ты выиграл!");
-      isWinner = true;
     } else {
-      alert("Ты проиграл!");
+      const isUserWinner = 
+        (userChoice === "камень" && computerChoice === "ножницы") ||
+        (userChoice === "ножницы" && computerChoice === "бумага") ||
+        (userChoice === "бумага" && computerChoice === "камень");
+      
+      const message = isUserWinner ? 'Ты победил!' : 'Ты проиграл!';
+      alert(message);
+      
       isWinner = true;
     }
   } else {

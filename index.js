@@ -7,12 +7,18 @@ while (!isWinner) {
   userChoice = userChoice.toLowerCase();
 
   let randomNum = Math.floor(Math.random() * 3);
-  if (randomNum === 0) {
-    computerChoice = "камень";
-  } else if (randomNum === 1) {
-    computerChoice = "ножницы";
-  } else {
-    computerChoice = "бумага";
+  switch (randomNum) {
+    case 0:
+      computerChoice = "камень";
+      break;
+
+    case 1:
+      computerChoice = "ножницы";
+      break;
+
+    case 2:
+      computerChoice = "бумага";
+      break;
   }
 
   if (
